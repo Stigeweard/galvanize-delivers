@@ -1,0 +1,39 @@
+.hideThis {
+  visibility: hidden;
+}
+
+#index-banner {
+  background-image: url("../background1.jpg");
+}
+
+.fullWidth {
+  margin:0 10px;
+}
+
+.card .card-title {
+ font-size: 1.7vw;
+}
+
+@media only screen and (max-width: 992px) {
+ .card .card-title {
+   font-size: 3vw;
+ }
+}
+
+@media only screen and (max-width: 600px) {
+ .card .card-title {
+   font-size: 4.5vw;
+ }
+}
+
+i.icon-pink {
+    color: #E91E63 !important;
+}
+
+.pinkpls {
+  color: #E91E63 !important;
+}
+
+.orderHead {
+  border-bottom: 1px solid black;
+}
