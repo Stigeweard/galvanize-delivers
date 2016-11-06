@@ -1,5 +1,15 @@
 $(function() {
 
+    // disables text highlight on double click (work-y, will still flicker highlighted)
+    function clearSelection() {
+        if (document.selection && document.selection.empty) {
+            document.selection.empty();
+        } else if (window.getSelection) {
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+        }
+    }
+
     function OrderItem(name, price) {
         this.name = name;
         this.price = price;
@@ -18,6 +28,8 @@ $(function() {
     }
 
     function addToOrder(event) {
+
+        clearSelection()
 
         var $targetItem = $(event.target),
             id = $targetItem[0].id,
@@ -59,13 +71,9 @@ $(function() {
         $('#subtotal').text(`$${subtotal.toFixed(2)}`)
         $('#tax').text(`$${tax.toFixed(2)}`)
         $('#total').text(`$${total.toFixed(2)}`)
-        
+
     }
 
-
     $('.orderItems').on('click', '.card-action', addToOrder);
-
-
-
 
 });

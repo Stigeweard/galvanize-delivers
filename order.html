@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <nav class="blue darken-3" role="navigation">
         <div class="nav-wrapper fullWidth"><a id="logo-container" href="index.html" class="brand-logo">Galvanize Delivers</a>
             <ul class="right hide-on-med-and-down">
@@ -126,32 +127,32 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <i class="material-icons icon-pink prefix">account_circle</i>
-                                    <input placeholder="John Doe" id="full_name" type="text" class="validate" presence="true">
+                                    <input placeholder="John Doe" id="full_name" type="text" class="validate" presence="true" required>
                                     <label for="full_name">Full Name</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
                                     <i class="material-icons icon-pink prefix">phone</i>
-                                    <input placeholder="xxx-xxx-xxxx" id="phone_number" pattern="^\d{3}-\d{3}-\d{4}$" type="tel" class="validate">
+                                    <input placeholder="xxx-xxx-xxxx" id="phone_number" pattern="^\d{3}-\d{3}-\d{4}$" type="tel" class="validate" required>
                                     <label for="phone_number" data-error="Wrong format" data-success="Right!">Phone Number</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
                                     <i class="material-icons icon-pink prefix">location_on</i>
-                                    <input placeholder="123 Fake St. Austin, TX., 78704" id="address" type="text" presence="true" class="validate">
+                                    <input placeholder="123 Fake St. Austin, TX., 78704" id="address" type="text" presence="true" class="validate" required>
                                     <label for="address" data-error="wrong" data-success="Right!">Address</label>
                                 </div>
+                            </div>
+                            <div class="row center">
+                                <button type="submit" id="place-order" class="btn-large waves-effect waves-light pink">Place Order</button>
                             </div>
                         </form>
                     </div>
 
                 </div>
 
-                <div class="row center">
-                    <a id="place-order" class="btn-large waves-effect waves-light pink">Place Order</a>
-                </div>
 
             </div>
         </div>
